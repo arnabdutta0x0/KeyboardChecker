@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body {
+    height: 97vh;
+    background-color: #f0f0f0; /* Set a light background color */
+}
+
+#name {
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    font-size: 24px;
+    border: 1px solid #ccc; /* Add a subtle border */
+    padding: 10px; /* Add some padding */
+    margin-bottom: 20px; /* Add spacing at the bottom */
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Add spacing between rows */
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow keys to wrap to the next line */
+}
+
+.bu {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc; /* Add a border */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Trebuchet MS';
+    margin: 5px; /* Reduce margin */
+    cursor: pointer; /* Add cursor pointer */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Special styles for specific keys */
+.bu#Enter {
+    width: 120px; /* Adjust width for Enter key */
+}
+
+.bu#Space {
+    width: 300px; /* Adjust width for Space key */
+}
+
+.bu#Shift,
+.bu#ShiftRight {
+    width: 90px; /* Adjust width for Shift keys */
+}
+
+.bu#Tab,
+.bu#CapsLock,
+.bu#Ctrl,
+.bu#Win,
+.bu#Alt,
+.bu#AltRight {
+    width: 80px; /* Adjust width for special keys */
+}
+
+</style>
+<body style="background-color:#212121; color:#fff">
+    <div id="name"><p>Enter Key's to check its working or not!</p></div>
+
+    <div class="keyboard">
+        <div class="row">
+            <div class="box">
+                <!-- Top row -->
+                <div class="bu" id="Tab">Tab</div>
+                <div class="bu" id="q">Q</div>
+                <div class="bu" id="w">W</div>
+                <div class="bu" id="e">E</div>
+                <div class="bu" id="r">R</div>
+                <div class="bu" id="t">T</div>
+                <div class="bu" id="y">Y</div>
+                <div class="bu" id="u">U</div>
+                <div class="bu" id="i">I</div>
+                <div class="bu" id="o">O</div>
+                <div class="bu" id="p">P</div>
+                <div class="bu" id="Backspace">Back<br>space</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box">
+                <!-- Middle row -->
+                <div class="bu" id="CapsLock">Caps<br>Lock</div>
+                <div class="bu" id="a">A</div>
+                <div class="bu" id="s">S</div>
+                <div class="bu" id="d">D</div>
+                <div class="bu" id="f">F</div>
+                <div class="bu" id="g">G</div>
+                <div class="bu" id="h">H</div>
+                <div class="bu" id="j">J</div>
+                <div class="bu" id="k">K</div>
+                <div class="bu" id="l">L</div>
+                <div class="bu" id="Enter">Enter</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box">
+                <!-- Bottom row -->
+                <div class="bu" id="Shift">Shift</div>
+                <div class="bu" id="z">Z</div>
+                <div class="bu" id="x">X</div>
+                <div class="bu" id="c">C</div>
+                <div class="bu" id="v">V</div>
+                <div class="bu" id="b">B</div>
+                <div class="bu" id="n">N</div>
+                <div class="bu" id="m">M</div>
+                <div class="bu" id="ArrowUp">↑</div>
+                <div class="bu" id="ShiftRight">Shift</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box">
+                <!-- Bottom row -->
+                <div class="bu" id="Control">Ctrl</div>
+                <div class="bu" id="Meta">Win</div>
+                <div class="bu" id="Alt">Alt</div>
+                <div class="bu" id="Space">Space</div>
+                <div class="bu" id="AltRight">Alt</div>
+                <div class="bu" id="ArrowLeft">←</div>
+                <div class="bu" id="ArrowDown">↓</div>
+                <div class="bu" id="ArrowRight">→</div>
+            </div>
+        </div>
+    </div>
+     
+    
+</body>
+<script>
+    const body = document.querySelector('body')
+    const bu = document.querySelectorAll('bu')
+
+  body.addEventListener('keydown',(e)=>{
+    console.log(e.keyCode)
+    let varr = document.getElementById(e.key)
+    varr.style.backgroundColor = 'cyan';
+  });
+
+  body.addEventListener('keypress',(e)=>{
+    console.log(e.keycode)
+    let varr = document.getElementById(e.key)
+    varr.style.backgroundColor = 'cyan';
+  });
+
+
+</script>
+</html>
